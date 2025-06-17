@@ -8,6 +8,7 @@ html{
   max-width:1100px;          /* hard stop so lines stay readable */
   margin-inline:auto;        /* centre horizontally */
   padding-inline:1rem;       /* breathing room at mobile sizes */
+  z-index: 15;
 }
 .gallery{
   max-width:100%;
@@ -53,17 +54,21 @@ header nav a:focus-visible{
 
 header.sub-hero {
     background-color: #F3F4F6;
-    background-image: none;
-    height: 10vh;
+    position: relative;       /* enable overlap */
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #E5E7EB;
+    z-index: 0;
   }
 header.sub-hero h2 {
   color: #1F2937;
   font-size: 2rem;
   margin: 0;
+}
+
+.sub-hero-overlay{
+  background: rgba(255,255,255,0.8);
 }
 
 #features{
