@@ -5,7 +5,7 @@
     display: block;
     margin-inline: auto;  /* center it */
     border-radius: 8px;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 figure img {
@@ -17,10 +17,4 @@ figure img {
 figure img:hover {
     transform: scale(1.03);
     opacity: 0.9;
-}
-
-.offerings-table img {
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
 }

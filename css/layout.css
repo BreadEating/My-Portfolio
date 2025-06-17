@@ -10,12 +10,6 @@ html{
   padding-inline:1rem;       /* breathing room at mobile sizes */
   z-index: 15;
 }
-.gallery{
-  max-width:100%;
-  margin-inline:auto;
-  padding-inline:1rem;
-  display:grid;
-}
 
 /* Navbar */
 header{
@@ -114,22 +108,19 @@ header.sub-hero h2 {
 .nav-toggle{display:none; background:none; border:0; cursor:pointer;}
 .bar{display:block; width:24px; height:3px; margin:4px 0; background:#333; transition:transform .3s,opacity .3s;}
 
-.teasers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
-
-
 @media(max-width:768px){
   header nav{display:none;}              /* hide links */
   header nav.active{display:flex;        /* show when JS adds .active */
-                    flex-direction:column;}
+                    flex-direction:column;
+                    gap:0.1rem;          /* tighter vertical spacing */}
   .nav-toggle{display:block;}
 }
 
 header.sub-hero h2{
-  text-align:csenter;
+  text-align:center;
   font-size: 1.5rem;
+}
+
+#features article{
+  width:90%;
 }
