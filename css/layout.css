@@ -1,0 +1,138 @@
+/* A 12‑px → 18‑px fluid scale for every rem unit */
+/* vw means viewport width, larger vw means more nonlinear scaling */
+html{
+  font-size: clamp(12px, 3vw, 18px);
+}
+
+.container{
+  max-width:1100px;          /* hard stop so lines stay readable */
+  margin-inline:auto;        /* centre horizontally */
+  padding-inline:1rem;       /* breathing room at mobile sizes */
+}
+.gallery{
+  max-width:100%;
+  margin-inline:auto;
+  padding-inline:1rem;
+  display:grid;
+}
+
+/* Navbar */
+header{
+  background:#ffffffee;
+  position:sticky; /* sticky means it will stay at the top of the viewport when scrolling */
+  top:0; /* cannot exceed the top of the viewport */
+  z-index:10; /* z-index is used to ensure it stays above other content */
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  padding: 1rem 0; /* increase header height */
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;            /* larger title */
+  text-align: center;
+}
+header nav {
+  display: flex;
+  justify-content: center;    /* center nav links */
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+header nav a{
+  text-decoration:none;      /* remove underline */
+  color:#2f2f2f;
+  font-weight:600;
+  font-size: 1.125rem;        /* larger link text */
+  padding:0.5rem 0.75rem;    /* click‑target size */
+  transition:background .3s; /* smooth hover */
+}
+header nav a:hover,
+header nav a:focus-visible{
+  background:#eee;           /* grey pill on hover / keyboard focus */
+  border-radius:4px;
+}
+
+header.sub-hero {
+    background-color: #F3F4F6;
+    background-image: none;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #E5E7EB;
+  }
+header.sub-hero h2 {
+  color: #1F2937;
+  font-size: 2rem;
+  margin: 0;
+}
+
+#features{
+  display:flex;
+  gap:2rem;                  /* space between cards */
+  flex-direction: column;     /* one article per row */
+  align-items: center;        /* center each article */
+  padding: 2rem 0;
+}
+#features article{
+  flex:1 1 250px;            /* grow | shrink | starting width */
+  background:#fafafa;
+  border-radius:0px; /* square corners */
+  width: 70%; /* max width for larger screens */
+  padding:3rem;
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+  transition:transform .3s;
+}
+
+/* Remove default link styling for teaser links */
+#features article a,
+#features article a:link,
+#features article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#features article h3{
+  margin:0.5rem 0; /* space around headings */
+  text-align:center; /* center headings */
+}
+
+#features article p{
+  margin:0.5rem 0; /* space around paragraphs */
+  text-align:center; /* center paragraphs */
+  color:#555; /* softer text color */
+}
+
+#features article:hover{
+  transform:translateY(-4px); /* lift effect on hover */
+}
+
+.btn{
+  display:inline-block; margin-top:1rem;
+  background:#ffbb55; color:#111; font-weight:700;
+  padding:0.5rem 1.25rem; border-radius:4px;
+  text-decoration:none; transition:opacity .3s;
+}
+.btn:hover{opacity:.85;}
+
+.nav-toggle{display:none; background:none; border:0; cursor:pointer;}
+.bar{display:block; width:24px; height:3px; margin:4px 0; background:#333; transition:transform .3s,opacity .3s;}
+
+.teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+@media(max-width:768px){
+  header nav{display:none;}              /* hide links */
+  header nav.active{display:flex;        /* show when JS adds .active */
+                    flex-direction:column;}
+  .nav-toggle{display:block;}
+}
+
+header.sub-hero h2{
+  text-align:csenter;
+  font-size: 1.5rem;
+}

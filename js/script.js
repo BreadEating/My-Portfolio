@@ -1,0 +1,22 @@
+window.addEventListener('DOMContentLoaded',()=>{
+  const nav=document.querySelector('header nav');
+  const btn=document.querySelector('.nav-toggle');
+  btn.addEventListener('click',()=>{
+    nav.classList.toggle('active');
+    btn.classList.toggle('open');
+  });
+});
+
+$(function(){
+  // wait until all images are loaded, then kick off the layout
+  $('#gallery').imagesLoaded( function() {
+    $('#gallery').justifiedGallery({
+      selector: 'figure',
+      rowHeight:        350,    // target row height in px
+      maxRowHeight:     500,    // allow some variation
+      margins:          5,      // gap between images
+      lastRow:          'justify', // or 'nojustify', 'hide'
+      captions:         false,   // use <figcaption> or alt tags
+    });
+  });
+});

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Hongda</title>
+  <link rel="icon" href="images/icons/icon.png" type="image/png">
+  <link rel="stylesheet" href="css/collections.css">
+
+  <script defer src="js/script.js"></script>
+  <script defer src="js/contact.js"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pDI6w1LWS...=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="work.html">My Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </header>
+
+    <header class="sub-hero">
+        <div class="sub-hero-overlay">
+        <h2>
+            Contact Me
+        </h2>
+        </div>
+    </header>
+
+  <main class="container">
+    <section class="contact-section">
+        <form class="contact-form"
+            action="https://formspree.io/f/xanoyazp"
+            method="POST"
+            novalidate>
+        <fieldset>
+          <div class="form-row">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-row">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-row full-width">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Hongda Jiang</p>
+  </footer>
+
+</body>
+</html>
