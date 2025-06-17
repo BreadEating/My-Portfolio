@@ -85,6 +85,9 @@
                         const img = document.createElement('img');
                         img.src = `images/photos/${fname}`;
                         img.alt = fname.replace(/\.[^.]+$/, '').replace(/_/g, ' ');
+
+                        img.loading = 'lazy'; // native lazy-loading hint to the browser
+
                         fig.appendChild(img);
                         gallery.appendChild(fig);
                     });

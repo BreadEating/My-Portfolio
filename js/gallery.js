@@ -8,6 +8,9 @@ $(function(){
       margins:          5,      // gap between images
       lastRow:          'justify', // or 'nojustify', 'hide'
       captions:         false,   // use <figcaption> or alt tags
+      waitThumbnailsLoad: false,   // ← progressive reveal
+      imagesAnimationDuration: 300, // nice, quick fade
+      CSSAnimation: true // use CSS animations
     });
   });
 });
