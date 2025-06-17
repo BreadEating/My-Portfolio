@@ -21,15 +21,8 @@ body {
 
 .logo a,
 .navbar a {
-  font-family: 'RobotoCondensed', sans-serif;
-}
-.btn {
   font-family: 'Montserrat', 'Open Sans', sans-serif;
-  font-weight: 600;
-}
-
-.logo a {
-  font-size: 1.75rem;
+  font-weight: 100;
 }
 
 h1 {
