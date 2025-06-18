@@ -48,10 +48,14 @@ $(function(){
   photos.forEach(fname => {
       const fig = document.createElement('figure');
       const img = document.createElement('img');
+
+      // Set data attributes for better loading
+      img.dataset.src = `images/photos/${fname}`;
       img.src = `images/photos/${fname}`;
       img.alt = fname.replace(/\.[^.]+$/, '').replace(/_/g, ' ');
 
       img.loading = 'lazy'; // native lazy-loading hint to the browser
+      img.decoding = 'async';
 
       fig.appendChild(img);
       gallery.appendChild(fig);
@@ -65,8 +69,19 @@ $(function(){
     margins:          5,      // gap between images
     lastRow:          'nojustify', // or 'nojustify', 'hide'
     captions:         false,   // use <figcaption> or alt tags
+    
     waitThumbnailsLoad: false,   // ← progressive reveal
+
+    justifyThreshold: 0.90,           // Lower threshold = faster row completion
+    refreshTime: 50,                  // Check for new images more frequently
+    efreshSensitivity: 0,            // Always refresh on image load
+    
     imagesAnimationDuration: 300, // nice, quick fade
-    CSSAnimation: true // use CSS animations
+    CSSAnimation: true, // use CSS animations
+
+    extension: /\.jpg$|\.jpeg$|\.png$|\.gif$/i,
+
+    rel: 'gallery',
+    target: '_blank'
   });
 });
