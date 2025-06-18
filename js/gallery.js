@@ -11,7 +11,7 @@ $(function(){
       '000420080008.jpg',
       'IMG_4988.jpeg',
       'IMG_4747.jpeg',
-      'IMG_4723.jpg',
+      'IMG_4723.JPG',
       'IMG_4621.jpeg',
       '000482610007.jpg',
       '000482610004.jpg',
